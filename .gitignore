@@ -1,0 +1,26 @@
+*.DS_Store
+*.env
+
+.rspec
+/.bundle
+/vendor/bundle
+
+# Ignore all logfiles and tmpfiles
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore the default SQLite database
+/db/*.splite3
+/db/*.sqlite3-journal
+
+# Ignore Byebug command history file
+.byebug_history
+
+# frontend
+/node_modules
+/yarn-error.log
+
+# assets
+/public/assets
