@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 
 RUN \
   apt-get update -qq \
-  && apt-get install -y --no-install-recommends build-essential nodejs libpq-dev libmysqlclient-dev mysql-client \
+  && apt-get install -y --no-install-recommends build-essential nodejs libpq-dev mysql-client \
   && rm -rf /var/lib/apt/lists/* \
   && mkdir -p $APP_ROOT
 
