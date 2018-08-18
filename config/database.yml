@@ -12,21 +12,23 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
+  port: 3306
+  pool: 5
+  username: <%= ENV['DB_USERNAME'] || 'mysql' %>
+  password: <%= ENV['DB_PASSWORD'] || 'root' %>
+  url: <%= ENV['DATABASE_URL'] %>
   host: localhost
 
 development:
   <<: *default
-  database: date-adjuster_development
+  database: date_adjuster_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: date-adjuster_test
+  database: date_adjuster_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +51,4 @@ test:
 #
 production:
   <<: *default
-  database: date-adjuster_production
-  username: date-adjuster
-  password: <%= ENV['DATE-ADJUSTER_DATABASE_PASSWORD'] %>
+  database: date_adjuster_production
