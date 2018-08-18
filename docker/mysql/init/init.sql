@@ -1,0 +1,6 @@
+CREATE USER mysql IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON *.* TO mysql@'%' IDENTIFIED BY 'root' WITH GRANT OPTION;
+GRANT ALL ON *.* TO mysql;
+
+CREATE DATABASE IF NOT EXISTS date_adjuster_development;
+CREATE DATABASE IF NOT EXISTS date_adjuster_test;
