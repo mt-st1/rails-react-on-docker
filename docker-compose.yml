@@ -12,7 +12,6 @@ services:
       - "3000:3000"
     volumes:
       - .:/date-adjuster
-      - vendor-bunlde:/date-adjuster/vendor/bundle
     depends_on:
       - db
   db:
@@ -28,6 +27,4 @@ services:
 
 volumes:
   mysql-data:
-    driver: local
-  vendor-bunlde:
     driver: local
