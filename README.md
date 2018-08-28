@@ -1,10 +1,10 @@
-# date-adjuster
-モダンな日程調整ツール.
+# rails-react-on-docker
+DockerでRails+mysqlの環境を構築し、webpacker(gem)でReactを導入する.
 
 ## 開発環境構築
 - このリポジトリをクローンする
 ```
-git clone git@github.com:mt-st1/date-adjuster.git
+git clone git@github.com:mt-st1/rails-react-on-docker.git
 ```
 - プロジェクトの構築
   - `docker-compose build`コマンドでサービスのビルドを実行する
